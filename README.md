@@ -293,7 +293,7 @@ python scripts/initialize-company.py \
 Located in `manual-setup-tutorial/`:
 
 1. **[Getting Started](manual-setup-tutorial/00.%20Getting%20Started%20-%20Tutorial%20Overview.md)** - Platform overview and setup
-2. **[AWS Account Setup](manual-setup-tutorial/1.%20AWS%20Account%20Setup.md)** - AWS configuration
+2. **[AWS Account Setup](manual-setup-tutorial/01.%20AWS%20Account%20Setup.md)** - AWS configuration
 3. **[Identity Management](manual-setup-tutorial/02.%20Identity%20and%20Access%20Management.md)** - IAM and security
 4. **[User Management](manual-setup-tutorial/03.%20User%20Management%20System.md)** - Authentication system
 5. **[Database Setup](manual-setup-tutorial/04.%20Database%20Setup.md)** - DynamoDB configuration
@@ -452,15 +452,15 @@ git push origin feature/amazing-feature
 
 ### **Q3 2024**
 
-- [ ] AI-powered issue categorization
+- [ ] Automated issue labeling and categorization
 - [ ] Advanced integration marketplace
 - [ ] Custom dashboard builder
 - [ ] Multi-language support
 
 ### **Q4 2024**
 
-- [ ] Voice-to-issue conversion
-- [ ] Predictive analytics
+- [ ] Issue import/export tools
+- [ ] Advanced reporting dashboards
 - [ ] Advanced compliance features
 - [ ] Global deployment regions
 
