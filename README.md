@@ -27,12 +27,14 @@ A production-ready, serverless issue tracking platform built on AWS, designed to
 This is a **complete multi-tenant issue tracking SaaS platform** similar to Jira, Linear, or Monday.com, built using AWS serverless technologies. The platform supports thousands of companies with complete data isolation, role-based access control, and scalable architecture.
 
 ### 🎯 **Perfect for:**
+
 - Software teams managing bugs and feature requests
-- Project managers coordinating team workflows  
+- Project managers coordinating team workflows
 - Companies needing secure, isolated project management
 - Startups to enterprises (scales automatically)
 
 ### 🌟 **Key Highlights:**
+
 - **🔒 Complete Company Isolation**: Each company's data is completely separate
 - **👥 Role-Based Access**: User → Admin → Super Admin → Root User hierarchy
 - **📈 Auto-Scaling**: Handles 1 user to 10,000+ users seamlessly
@@ -49,12 +51,12 @@ graph TB
         B[Company Issue Workspace]
         C[Landing Pages]
     end
-    
+
     subgraph "API Layer"
         D[API Gateway]
         E[JWT Authorizer]
     end
-    
+
     subgraph "Business Logic"
         F[Issue Management λ]
         G[Team Management λ]
@@ -62,7 +64,7 @@ graph TB
         I[Company Provisioning λ]
         J[Analytics λ]
     end
-    
+
     subgraph "Data Layer"
         K[(Issues Pool)]
         L[(Teams Pool)]
@@ -70,13 +72,13 @@ graph TB
         N[(Companies)]
         O[(Comments Pool)]
     end
-    
+
     subgraph "Infrastructure"
         P[CloudWatch Monitoring]
         Q[SNS Notifications]
         R[S3 File Storage]
     end
-    
+
     A --> D
     B --> D
     C --> D
@@ -99,6 +101,7 @@ graph TB
 ## ✨ Features
 
 ### 🎯 **Issue Management**
+
 - Create, update, assign, and track issues
 - Custom workflows (Open → In Progress → In Review → Closed)
 - Priority levels (Low, Medium, High, Critical)
@@ -107,6 +110,7 @@ graph TB
 - Bulk operations and automation
 
 ### 👥 **Team Collaboration**
+
 - Create teams and assign members
 - Team-based issue assignments
 - Real-time comments and discussions
@@ -115,6 +119,7 @@ graph TB
 - Cross-team collaboration
 
 ### 🔐 **Security & Access Control**
+
 - Complete company data isolation
 - Role-based permissions (4-tier hierarchy)
 - JWT-based authentication
@@ -122,6 +127,7 @@ graph TB
 - Audit logs and compliance tracking
 
 ### 📊 **Analytics & Reporting**
+
 - Real-time dashboards and metrics
 - Team performance insights
 - Issue resolution trends
@@ -129,6 +135,7 @@ graph TB
 - Usage analytics and billing integration
 
 ### 🏢 **Multi-Company Management**
+
 - Automated company provisioning
 - Subscription tier management
 - Usage monitoring and enforcement
@@ -138,6 +145,7 @@ graph TB
 ## 🏢 Multi-Tenant Structure
 
 ### **🔒 Company Isolation Model**
+
 Each company operates in complete isolation:
 
 ```
@@ -149,17 +157,21 @@ Company A                    Company B                    Company C
 ```
 
 ### **👑 Role Hierarchy**
+
 1. **Root User** (Platform Owner)
+
    - Manage all companies system-wide
    - System analytics and billing
    - Platform administration
 
 2. **Super Admin** (Per Company)
+
    - Add/remove users in their company
    - Change user roles (User ↔ Admin)
    - Company settings and integrations
 
 3. **Admin** (Per Company)
+
    - Create and manage teams
    - Assign issues and manage workflows
    - Project settings
@@ -171,21 +183,22 @@ Company A                    Company B                    Company C
 
 ## 💰 Subscription Tiers
 
-| Feature | Basic ($10/mo) | Premium ($50/mo) | Platinum ($200/mo) |
-|---------|----------------|------------------|--------------------|
-| **Users** | Up to 5 | Up to 25 | Unlimited |
-| **Issues** | 1,000 max | 10,000 max | Unlimited |
-| **API Calls/day** | 1,000 | 10,000 | Unlimited |
-| **Custom Workflows** | ❌ | ✅ | ✅ |
-| **Advanced Analytics** | ❌ | ✅ | ✅ |
-| **Integrations** | Email only | Slack, Email | All + Custom |
-| **Support** | Email | Priority Email + Chat | Dedicated Manager |
-| **SLA** | 99.5% | 99.9% | 99.99% |
-| **Infrastructure** | Shared | Semi-Dedicated | Fully Dedicated |
+| Feature                | Basic ($10/mo) | Premium ($50/mo)      | Platinum ($200/mo) |
+| ---------------------- | -------------- | --------------------- | ------------------ |
+| **Users**              | Up to 5        | Up to 25              | Unlimited          |
+| **Issues**             | 1,000 max      | 10,000 max            | Unlimited          |
+| **API Calls/day**      | 1,000          | 10,000                | Unlimited          |
+| **Custom Workflows**   | ❌             | ✅                    | ✅                 |
+| **Advanced Analytics** | ❌             | ✅                    | ✅                 |
+| **Integrations**       | Email only     | Slack, Email          | All + Custom       |
+| **Support**            | Email          | Priority Email + Chat | Dedicated Manager  |
+| **SLA**                | 99.5%          | 99.9%                 | 99.99%             |
+| **Infrastructure**     | Shared         | Semi-Dedicated        | Fully Dedicated    |
 
 ## 🛠️ Technology Stack
 
 ### **Backend (AWS Serverless)**
+
 - **AWS Lambda** - Business logic execution
 - **Amazon DynamoDB** - NoSQL database with company isolation
 - **Amazon API Gateway** - RESTful API endpoints
@@ -195,12 +208,14 @@ Company A                    Company B                    Company C
 - **Amazon S3** - File storage and static hosting
 
 ### **Frontend**
+
 - **React.js** - Modern web application framework
 - **Material-UI** - Professional UI components
 - **Redux** - State management
 - **Axios** - API communication
 
 ### **DevOps & Deployment**
+
 - **AWS CloudFormation** - Infrastructure as Code
 - **AWS CodePipeline** - CI/CD automation
 - **AWS CodeBuild** - Automated testing and building
@@ -208,6 +223,7 @@ Company A                    Company B                    Company C
 - **pytest** - Comprehensive testing framework
 
 ### **Monitoring & Analytics**
+
 - **CloudWatch Dashboards** - Real-time monitoring
 - **AWS X-Ray** - Distributed tracing
 - **Custom Metrics** - Business intelligence
@@ -215,6 +231,7 @@ Company A                    Company B                    Company C
 ## 🚀 Quick Start
 
 ### **Prerequisites**
+
 - AWS Account with appropriate permissions
 - Python 3.11+
 - Node.js 18+
@@ -222,12 +239,14 @@ Company A                    Company B                    Company C
 - Git
 
 ### **1. Clone Repository**
+
 ```bash
-git clone https://github.com/your-org/aws-saas-factory-ref-solution-serverless-saas.git
-cd aws-saas-factory-ref-solution-serverless-saas
+git clone https://github.com/your-org/aws-IssueTracker-factory-ref-solution-serverless-saas.git
+cd aws-IssueTracker-factory-ref-solution-serverless-saas
 ```
 
 ### **2. Backend Setup**
+
 ```bash
 # Install Python dependencies
 pip install -r requirements.txt
@@ -243,6 +262,7 @@ aws cloudformation deploy \
 ```
 
 ### **3. Frontend Setup**
+
 ```bash
 cd client
 npm install
@@ -251,6 +271,7 @@ npm start
 ```
 
 ### **4. Initialize First Company**
+
 ```bash
 # Create your first company and admin user
 python scripts/initialize-company.py \
@@ -260,6 +281,7 @@ python scripts/initialize-company.py \
 ```
 
 ### **5. Access Application**
+
 - **Admin Dashboard**: `https://your-domain.com/admin`
 - **Issue Workspace**: `https://your-domain.com/app`
 - **API Endpoint**: `https://your-api-id.execute-api.region.amazonaws.com/prod`
@@ -267,6 +289,7 @@ python scripts/initialize-company.py \
 ## 📖 Documentation
 
 ### **📚 Complete Tutorial Series**
+
 Located in `manual-setup-tutorial/`:
 
 1. **[Getting Started](manual-setup-tutorial/00.%20Getting%20Started%20-%20Tutorial%20Overview.md)** - Platform overview and setup
@@ -283,12 +306,14 @@ Located in `manual-setup-tutorial/`:
 12. **[Deployment Strategy](manual-setup-tutorial/11.%20Multi-Tenant%20Deployment%20Strategy.md)** - Production deployment
 
 ### **🔌 API Documentation**
+
 - **Issue Management**: [API_DOCS.md](docs/API_DOCS.md)
-- **Team Management**: [TEAM_API.md](docs/TEAM_API.md)  
+- **Team Management**: [TEAM_API.md](docs/TEAM_API.md)
 - **User Management**: [USER_API.md](docs/USER_API.md)
 - **Company Management**: [COMPANY_API.md](docs/COMPANY_API.md)
 
 ### **🏗️ Architecture Deep Dives**
+
 - **[Multi-Tenancy Design](docs/MULTI_TENANCY.md)** - Isolation strategy
 - **[Security Model](docs/SECURITY.md)** - Role-based access control
 - **[Scaling Strategy](docs/SCALING.md)** - Performance optimization
@@ -297,6 +322,7 @@ Located in `manual-setup-tutorial/`:
 ## 🧪 Testing
 
 ### **Run Test Suite**
+
 ```bash
 # Install test dependencies
 pip install -r requirements-test.txt
@@ -313,6 +339,7 @@ pytest e2e/                    # End-to-end tests
 ```
 
 ### **Test Coverage**
+
 ```bash
 # Generate coverage report
 pytest --cov=src --cov-report=html
@@ -320,6 +347,7 @@ open htmlcov/index.html
 ```
 
 ### **Load Testing**
+
 ```bash
 # Test with 100 concurrent users
 pytest load/test_team_collaboration.py -v
@@ -331,11 +359,13 @@ python scripts/load-test.py --users 500 --duration 300
 ## 🚢 Deployment
 
 ### **🌍 Environment Strategy**
+
 - **Development**: Feature development and testing
 - **Staging**: Production-like environment for validation
 - **Production**: Multi-tier deployment strategy
 
 ### **🚀 Deployment Pipeline**
+
 ```bash
 # Automated deployment
 ./scripts/deploy.sh --env production --version v1.2.3
@@ -347,6 +377,7 @@ python verification/post-deployment-tests.py
 ```
 
 ### **📊 Monitoring**
+
 - **CloudWatch Dashboards**: Real-time system health
 - **Custom Metrics**: Business KPIs and usage analytics
 - **Automated Alerts**: Performance and error monitoring
@@ -357,9 +388,10 @@ python verification/post-deployment-tests.py
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### **Development Setup**
+
 ```bash
 # Fork the repository
-git clone https://github.com/YOUR-USERNAME/aws-saas-factory-ref-solution-serverless-saas.git
+git clone https://github.com/YOUR-USERNAME/aws-IssueTracker-factory-ref-solution-serverless-saas.git
 
 # Create feature branch
 git checkout -b feature/amazing-feature
@@ -373,6 +405,7 @@ git push origin feature/amazing-feature
 ```
 
 ### **Code Standards**
+
 - Follow PEP 8 for Python code
 - Use TypeScript for frontend components
 - Include tests for all new features
@@ -381,24 +414,28 @@ git push origin feature/amazing-feature
 ## 💡 Use Cases
 
 ### **Software Development Teams**
+
 - Bug tracking and feature management
 - Sprint planning and task assignment
 - Code review workflow integration
 - Performance monitoring and analytics
 
 ### **Project Management**
+
 - Cross-functional team coordination
 - Timeline and milestone tracking
 - Resource allocation and planning
 - Client communication and reporting
 
 ### **Enterprise Organizations**
+
 - Department-specific issue tracking
 - Compliance and audit trail requirements
 - Custom workflow and approval processes
 - Integration with existing enterprise tools
 
 ### **SaaS Businesses**
+
 - White-label issue tracking for clients
 - Multi-customer platform management
 - Usage-based billing and analytics
@@ -407,18 +444,21 @@ git push origin feature/amazing-feature
 ## 📈 Roadmap
 
 ### **Q2 2024**
+
 - [ ] Mobile applications (iOS/Android)
 - [ ] Advanced automation workflows
 - [ ] Time tracking and reporting
 - [ ] Custom field types
 
 ### **Q3 2024**
+
 - [ ] AI-powered issue categorization
 - [ ] Advanced integration marketplace
 - [ ] Custom dashboard builder
 - [ ] Multi-language support
 
 ### **Q4 2024**
+
 - [ ] Voice-to-issue conversion
 - [ ] Predictive analytics
 - [ ] Advanced compliance features
@@ -427,6 +467,7 @@ git push origin feature/amazing-feature
 ## 📊 Performance Metrics
 
 ### **Production Statistics**
+
 - **👥 Active Companies**: 1,247+
 - **🎯 Monthly Issues Processed**: 50,000+
 - **⚡ Average Response Time**: 145ms
@@ -434,6 +475,7 @@ git push origin feature/amazing-feature
 - **📈 Uptime**: 99.97%
 
 ### **Cost Efficiency**
+
 - **💰 Average Monthly Cost per Company**: $2.50
 - **📊 Cost per Issue**: $0.05
 - **⚡ Lambda Executions**: 2M+ per month
@@ -442,13 +484,16 @@ git push origin feature/amazing-feature
 ## 📞 Support & Community
 
 ### **Getting Help**
+
 - **📖 Documentation**: Comprehensive guides and tutorials
-- **💬 Community Forum**: [GitHub Discussions](https://github.com/your-org/aws-saas-factory-ref-solution-serverless-saas/discussions)
-- **🐛 Bug Reports**: [GitHub Issues](https://github.com/your-org/aws-saas-factory-ref-solution-serverless-saas/issues)
+- **💬 Community Forum**: [GitHub Discussions](https://github.com/your-org/aws-IssueTracker-factory-ref-solution-serverless-saas/discussions)
+- **🐛 Bug Reports**: [GitHub Issues](https://github.com/your-org/aws-IssueTracker-factory-ref-solution-serverless-saas/issues)
 - **📧 Email Support**: support@your-domain.com
 
 ### **Enterprise Support**
+
 For Platinum tier customers and enterprise deployments:
+
 - Dedicated support manager
 - Priority bug fixes and feature requests
 - Custom deployment assistance
@@ -469,6 +514,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ using AWS serverless technologies**
 
-*Ready to revolutionize how your team tracks issues and collaborates? Deploy your own instance today!*
+_Ready to revolutionize how your team tracks issues and collaborates? Deploy your own instance today!_
 
 [![Deploy to AWS](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=issue-tracker-saas&templateURL=https://your-bucket.s3.amazonaws.com/cloudformation-template.yaml)
