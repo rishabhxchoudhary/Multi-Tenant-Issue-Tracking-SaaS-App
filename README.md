@@ -269,16 +269,16 @@ python scripts/initialize-company.py \
 ### **📚 Complete Tutorial Series**
 Located in `manual-setup-tutorial/`:
 
-1. **[Getting Started](manual-setup-tutorial/0.%20Getting%20Started%20-%20Tutorial%20Overview.md)** - Platform overview and setup
+1. **[Getting Started](manual-setup-tutorial/00.%20Getting%20Started%20-%20Tutorial%20Overview.md)** - Platform overview and setup
 2. **[AWS Account Setup](manual-setup-tutorial/1.%20AWS%20Account%20Setup.md)** - AWS configuration
-3. **[Identity Management](manual-setup-tutorial/2.%20Identity%20and%20Access%20Management.md)** - IAM and security
-4. **[User Management](manual-setup-tutorial/3.%20User%20Management%20System.md)** - Authentication system
-5. **[Database Setup](manual-setup-tutorial/4.%20Database%20Setup.md)** - DynamoDB configuration
-6. **[Lambda Functions](manual-setup-tutorial/5.%20First%20Lambda%20Function.md)** - Business logic
-7. **[Issue Management API](manual-setup-tutorial/6.%20Issue%20Management%20API.md)** - Core functionality
-8. **[Team Management](manual-setup-tutorial/7.%20Team%20and%20User%20Management%20API.md)** - Collaboration features
-9. **[Security & OAuth](manual-setup-tutorial/8.%20API%20Gateway%20Security%20and%20OAuth2.md)** - Authentication
-10. **[Multi-Tenant Logic](manual-setup-tutorial/9.%20Advanced%20Multi-Tenant%20Logic.md)** - Company management
+3. **[Identity Management](manual-setup-tutorial/02.%20Identity%20and%20Access%20Management.md)** - IAM and security
+4. **[User Management](manual-setup-tutorial/03.%20User%20Management%20System.md)** - Authentication system
+5. **[Database Setup](manual-setup-tutorial/04.%20Database%20Setup.md)** - DynamoDB configuration
+6. **[Lambda Functions](manual-setup-tutorial/05.%20First%20Lambda%20Function.md)** - Business logic
+7. **[Issue Management API](manual-setup-tutorial/06.%20Issue%20Management%20API.md)** - Core functionality
+8. **[Team Management](manual-setup-tutorial/07.%20Team%20and%20User%20Management%20API.md)** - Collaboration features
+9. **[Security & OAuth](manual-setup-tutorial/08.%20API%20Gateway%20Security%20and%20OAuth2.md)** - Authentication
+10. **[Multi-Tenant Logic](manual-setup-tutorial/09.%20Advanced%20Multi-Tenant%20Logic.md)** - Company management
 11. **[Backend Testing](manual-setup-tutorial/10.%20Complete%20Backend%20Testing.md)** - Quality assurance
 12. **[Deployment Strategy](manual-setup-tutorial/11.%20Multi-Tenant%20Deployment%20Strategy.md)** - Production deployment
 
